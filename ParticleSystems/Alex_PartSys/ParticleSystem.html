@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PartSysBouncy15</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL
+	-->
+  <body onload="main()">
+    <canvas id="webgl" width="600" height="600">
+    	Please use a browser that supports "canvas"
+    </canvas> 
+	<br> 
+	<b>Particle System Controls:</b> 
+	<br>
+	<b>r/R key:</b> Shake the birds. (it'll take a moment for them to flock again) 
+	<b>p or P key:</b> pause/resume.	
+		<br>
+	<b>c or C key:</b> toggle clear-screen.  
+		<br>
+		<b>z/Z key:</b> less/more drag.  
+	<b>g/G key:</b> less/more gravity <br>
+	<b>f or F: switch solvers</b> (implicit vs. explicit) 
+	<br>
+	<b>b or B:</b> floor-bounce method
+	
+	<!-- Make 'div' elements to hold changeable HTML made in our JavaScript file;
+		 (where? look at the end of 'BouncyBall03.js' at 
+			myKeyPress(), myKeyDown() and myKeyUp() fcns)
+	-->
+	<p>
+		<div id='KeyControls'> KeyControls... </div>
+		<div id='KeyDown'> KeyDown...</div>
+		<div id='KeyMod'> KeyMod...  </div>
+		<div id='MouseResult0'> MouseResult0... </div> 
+		<div id='MouseResult1'> MouseResult1... </div>
+    </p>
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+	<!-- We modified the library cuon-matrix.js from the book 
+		"WebGL Programming Guide"(K. Matsuda, 2013),
+		to add matrix-stack and quaternion capabilities, 
+		and renamed it cuon-matrix-quat.js -->
+    <script src="../lib/cuon-matrix-quat03.js"></script> 
+	<!--	Finally, load in our own JavaScript program files:
+	-->
+		<script src="CForcer02.js"></script>
+		<script src="CLimit02.js"></script>
+		<script src="CubeAndGridVBO.js"></script>
+		<script src="PartSys06.js"></script>
+    <script src="ChenAlex_ProjA.js"></script>
+  </body>
+</html>
